@@ -1,0 +1,49 @@
+.Modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.Modal__content {
+  padding: 20px 25px;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 50vw;
+  transform: scale(0);
+  transition: 0.4s all;
+}
+.Modal__content_text {
+  max-height: 80vh;
+  overflow: auto;
+  margin-top: 20px;
+}
+.Modal__content_text::-webkit-scrollbar {
+  width: 0;
+}
+.Modal__content.Active {
+  transform: scale(1);
+}
+
+.Modal.Active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.Modal__closing {
+  color: #333333;
+  display: block;
+  text-align: right;
+}
+.Modal__closing span {
+  cursor: pointer;
+}

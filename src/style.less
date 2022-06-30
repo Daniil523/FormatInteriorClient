@@ -1,0 +1,201 @@
+@import '../node_modules/antd/lib/style/themes/default.less';
+@import '../node_modules/antd/dist/antd.compact.less';
+
+@primary-color: #313235;
+@layout-header-background: #212224;
+@layout-body-background: white;
+@layout-header-height: 80px;
+@menu-item-padding: 0 40px;
+@font-size-base: 16px;
+@calendar-item-active-bg: rgb(228, 228, 228);
+@select-selection-item-bg: red;
+@select-item-selected-bg: rgb(228, 228, 228);
+@border-radius-base: 4px;
+@select-border-color: @primary-color;
+@input-border-color: @primary-color;
+@checkbox-border-radius: 2px;
+
+@font-face {
+  // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом)
+  font-family: 'Avenir';
+  // адрес шрифта и тип
+  src: url('./fonts/AvenirNextCyrMedium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+* {
+  font-family: 'Avenir';
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+body {
+  background-color: #f0f2f5;
+}
+.error {
+  color: red;
+}
+.logonav {
+  float: left;
+  margin: 24px 50px 16px 0;
+}
+* {
+  box-sizing: border-box;
+}
+.logologin {
+  width: 60%;
+  margin-top: 50px;
+}
+.Login_form_wrap {
+  background-color: #fff;
+  text-align: center;
+  max-width: 700px;
+  border-radius: 10px;
+}
+.Login_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: @layout-header-background;
+}
+
+.input_login {
+  font-size: 16px;
+  margin-top: 15px;
+  padding-left: 15px;
+  height: 50px;
+  width: 50%;
+  border-radius: 5px;
+  border: solid 1px @primary-color;
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+.Login_form {
+  margin-top: 40px;
+}
+.btn {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background-color: @layout-header-background;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 12px 50px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: @primary-color;
+}
+.PageWraper {
+  //   height: 100vh;
+  background-color: #fff;
+  padding: 60px;
+}
+.profile-img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+.mr {
+  margin-right: 15px;
+}
+.profile-h1 {
+  font-size: 2.3em;
+  margin-bottom: 100;
+}
+.profile-h2 {
+  font-size: 1.3em;
+}
+
+.modal_calendar_wraper {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.modal_task_card {
+  padding: 20px;
+  width: 500px;
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+  margin: 10px;
+}
+.modal_task_card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.modal_tusk_info {
+  margin-bottom: 0;
+}
+.modal_task_name {
+  margin-bottom: 15px;
+}
+.modal_tusk {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.object_task_wraper {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  padding: 10px;
+  box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.2);
+  background-color: #fcfcfc;
+  border-radius: 5px;
+}
+
+.objects_card_wraper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.2);
+  background-color: #fcfcfc;
+  border-radius: 5px;
+}
+.objects_card {
+  padding: 20px;
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+  margin: 10px;
+}
+.objects_card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.custom_input {
+  border: solid 1px @primary-color;
+  height: 34px;
+  padding: 0 11px;
+  border-radius: @border-radius-base;
+  width: 100%;
+  line-height: 1.6;
+  font-size: 18px;
+}
+.custom_input::-webkit-input-placeholder {
+  color: #c5c5c5;
+}
+.custom_textarea {
+  border: solid 1px @primary-color;
+  padding: 0 11px;
+  border-radius: @border-radius-base;
+  width: 100%;
+  line-height: 1.6;
+  font-size: 18px;
+}
+.custom_textarea::-webkit-input-placeholder {
+  color: #c5c5c5;
+}
