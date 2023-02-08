@@ -86,7 +86,7 @@ function AppRoutes() {
         }
       />
       <Route
-        path="/manager-object-task/:id/"
+        path="/manager-tasks/manager-object-task/:id/"
         element={
           <ManagerRoute>
             <ManagerTaskRoute>

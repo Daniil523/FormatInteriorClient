@@ -170,7 +170,7 @@ function ManagerOneTask() {
                   key={task.id}
                   className="modal_task_card"
                   onClick={() => {
-                    navigate(`/manager-object-task/${task.id}`)
+                    navigate(`/manager-tasks/manager-object-task/${task.id}`)
                   }}
                   style={
                     task.completeness ? { backgroundColor: '#e2ffdb' } : {}

@@ -22,7 +22,7 @@ function getValue(value) {
 
 function ManagerOneTask() {
   const auth = useAuth()
-  const { id } = useParams()
+  const { id, taskId} = useParams()
   const navigate = useNavigate()
   const [modalActive1, setModalActive1] = useState(false)
   const [modalActive2, setModalActive2] = useState(false)

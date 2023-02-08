@@ -6,7 +6,7 @@ function ManagerTaskRoute({ children, ...rest }) {
   const auth = useAuth()
   const [ret, setRet] = useState()
 
-  const { id } = useParams()
+  const { id} = useParams()
 
   useEffect(() => {
     async function getTusk(id) {
@@ -21,6 +21,7 @@ function ManagerTaskRoute({ children, ...rest }) {
         }
       }
     }
+    console.log(id)
     getTusk(id)
   }, [])
   return ret

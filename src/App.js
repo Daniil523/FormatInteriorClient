@@ -28,7 +28,7 @@ function App() {
               }}
             >
               <div className="PageWraper">
-                <Routes />
+                <Routes/>
               </div>
             </Content>
             <Footer style={{ textAlign: 'center', backgroundColor: '#f0f2f5' }}>
