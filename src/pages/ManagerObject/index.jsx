@@ -37,7 +37,6 @@ function ManagerOneTask() {
   const [thisObject, setThisObject] = useState({})
   const [formC, setFormC] = useState(<></>)
   const [serviceInCategory, setServiceInCategory] = useState([])
-
   const [modalForAddActive, setModalForAddActive] = useState(false)
   const [modalChangeObject, setModalChangeObject] = useState(false)
   const [modalDelete, setModalDelete] = useState(false)
@@ -125,11 +124,11 @@ function ManagerOneTask() {
         {thisObject.client_name}
       </h3>
       <h3>
-        <b>Телфон заказчик: </b>
+        <b>Телфон заказчика: </b>
         <a href={`tel:${thisObject.client_phone}`}>{thisObject.client_phone}</a>
       </h3>
       <h3>
-        <b>E-mail заказчик: </b>
+        <b>E-mail заказчика: </b>
         <a href={`mailto:${thisObject.client_email}`}>
           {thisObject.client_email}
         </a>

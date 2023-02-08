@@ -112,10 +112,10 @@ function AppRoutes() {
         }
       />
       <Route path="/not-found-404" element={<NotFound />} />
-      <Route path="*" element={<Navigate to="/not-found-404" />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   ) : (
-    <h1>Жди</h1>
+    <h1>Загрузка...</h1>
   )
 }
 

@@ -3,7 +3,6 @@ import useAuth from '../../../hooks/useAuth'
 
 function ManagerRoute({ children, ...rest }) {
   const auth = useAuth()
-  console.log(auth.user.position.name)
   return auth.user.position.name === 'Руководитель проекта' ? (
     children
   ) : (

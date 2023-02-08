@@ -55,7 +55,6 @@ function WorkerTasks() {
           address: item.object.location,
         })
       })
-      console.log(data)
       setData(data)
     }
     createTable()

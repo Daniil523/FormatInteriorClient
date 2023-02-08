@@ -54,17 +54,14 @@ function ManagerTasks() {
   ]
   async function getObjects() {
     const { data } = await api.auth.getObjects()
-    console.log(data)
     setObjects(data)
   }
   async function getCategorys() {
     const { data } = await api.auth.getCategories()
-    console.log(data)
     setCategory(data)
   }
   async function getTasks(id) {
     const { data } = await api.auth.getObjectTask(id)
-    console.log(data)
     setTasks(data)
   }
   function createTable(name) {
@@ -102,7 +99,6 @@ function ManagerTasks() {
         columns={columns}
         dataSource={data}
         summary={(pageData) => {
-          console.log(tasks)
           return data.length === 0 ? (
             <></>
           ) : (

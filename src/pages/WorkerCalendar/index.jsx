@@ -100,7 +100,6 @@ function WorkerCalendar() {
       date_for_head: value.format('Do MMMM YYYY'),
       tasks: getListData(value),
     })
-    console.log(dataModal.tasks)
     setModalActive(true)
   }
   return (

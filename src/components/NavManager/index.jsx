@@ -2,8 +2,27 @@ import useAuth from '../../hooks/useAuth'
 import { useNavigate } from 'react-router-dom'
 import { Layout, Menu } from 'antd'
 import logo from '../../image/logonav.png'
+import {useEffect, useState} from "react";
 const { Header, Content, Footer } = Layout
-function NavManager({ children }) {
+function NavManager() {
+  const [activeNav, setActiveNav] = useState(null)
+  useEffect(() => {
+      if (window.location.pathname.includes('/manager-calendar')){
+          setActiveNav('1')
+      }
+      if (window.location.pathname.includes('/manager-tasks')){
+          setActiveNav('2')
+      }
+      if (window.location.pathname.includes('/manager-object-task')){
+          setActiveNav('2')
+      }
+      if (window.location.pathname.includes('/manager-buy')){
+          setActiveNav('3')
+      }
+      if (window.location.pathname.includes('/profile')){
+          setActiveNav('4')
+      }
+  }, [])
   const auth = useAuth()
   const navigate = useNavigate()
   const items = [
@@ -28,19 +47,23 @@ function NavManager({ children }) {
       <Menu
         theme="dark"
         mode="horizontal"
-        defaultSelectedKeys={['1']}
+        selectedKeys={activeNav}
         items={items}
         onClick={function ({ key, keyPath, domEvent }) {
           if (key === '1') {
+            setActiveNav('1')
             navigate('/manager-calendar')
           }
           if (key === '2') {
+            setActiveNav('2')
             navigate('/manager-tasks')
           }
           if (key === '3') {
+            setActiveNav('3')
             navigate('/manager-buy')
           }
           if (key === '4') {
+            setActiveNav('4')
             navigate('/profile')
           }
         }}

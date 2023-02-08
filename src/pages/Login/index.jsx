@@ -21,7 +21,6 @@ function Login() {
   const onSubmit = async (data) => {
     try {
       setIsLoading(true)
-      console.log(data)
       const { data: loginData } = await api.auth.login(data)
       auth.setToken(loginData.auth_token)
       const { data: user } = await api.auth.getProfile()
@@ -43,7 +42,6 @@ function Login() {
     <div className="Login_page">
       <div className="Login_form_wrap">
         <img src={logo} alt="logo" className="logologin" />
-        {console.log(errors.username)}
         <form className="Login_form" onSubmit={handleSubmit(onSubmit)}>
           <div>
             <input
@@ -71,6 +69,7 @@ function Login() {
             <button className="btn">Войти</button>
           </div>
         </form>
+        <h3>Для корректной работы отключите AdBlock</h3>
       </div>
     </div>
   )
