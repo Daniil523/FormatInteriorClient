@@ -16,7 +16,7 @@ function NavManager() {
     >
       <img src={logo} alt="logo" className="logonav" />
         <NavLink to={'/manager-calendar'} className={({isActive}) => isActive ? 'nav navActive' : 'nav'}>Календарь</NavLink>
-        <NavLink to={'/manager-tasks'} className={({isActive}) => isActive ? 'nav navActive' : 'nav'}>Задачи</NavLink>
+        <NavLink to={'/manager-tasks'} className={({isActive}) => isActive ? 'nav navActive' : 'nav'}>Объекты</NavLink>
         <NavLink to={'/manager-buy'} className={({isActive}) => isActive ? 'nav navActive' : 'nav'}>Сводка</NavLink>
         <NavLink to={'/profile'} className={({isActive}) => isActive ? 'nav navActive' : 'nav'}>Мой профиль</NavLink>
     </Header>
